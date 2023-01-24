@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Reverse digit number print
+        </title>
+        <script>           
+            function reverseDigit(num)
+            {             
+            i=0;
+            rev=0;
+            while(num>0)
+            {
+                i=num%10
+                rev=rev*10+i
+                num=parseInt(num/10)
+                add=j+ rev
+            }
+            return rev
+            }
+            num=parseInt(prompt("enter the number to be reversed"))
+            j=num;
+            document.write("the reversed number="+reverseDigit(num))
+            document.write("<br>the addition of rev and num="+add)        
+        </script>       
+    </head>
+</html>

@@ -1,0 +1,31 @@
+<!-- Write a program that takes a character as input and prints either 
+1,0 or -1 according to the following rules.
+
+print 1, if the character is an UpperCase alphabet(A-Z)
+print 0,if the character is a lowerCase alphabet(a-z)
+print -1,if the character is not an alphabet -->
+<html>
+    <head>
+        <script>
+            function checkchar()
+            {
+                ch=document.getElementById("t1").value;
+                ascii=ch.charCodeAt(0)
+                if(ascii>=65 && ascii<=90)
+                    alert("You type captical later")
+                else if(ascii>=97 && ascii<=122)
+                    alert("You type small larter")
+                else if(ascii>=48 && ascii<=57)
+                    alert("you type number")
+                else
+                    alert("Spacial symbol")
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="t1" id="t1">
+            <input type="button" value="check" onclick="checkchar();">
+        </form>
+    </body>
+</html>

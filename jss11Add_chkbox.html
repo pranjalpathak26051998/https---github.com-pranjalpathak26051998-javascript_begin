@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>
+        Add the checkbox
+    </title>
+    <script>
+        function selQuali() {
+            str = " "
+            if (document.getElementById("ch1").checked) {
+                str = str + "Doctorate_Of_Philosophy"
+
+                if (document.getElementById("ch2").checked) {
+                    str = str + "Post_Graduation"
+
+                    if (document.getElementById("ch3").checked) {
+                        str = str + "Graduation"
+
+                        if (document.getElementById("ch4").checked) {
+                            str = str + "Intermediate"
+
+                            if (document.getElementById("ch5").checked) {
+                                str = str + "HighSchool"
+                            }
+                        }
+                    }
+                }
+            }
+            document.getElementById("res").innerHTML = str
+        }
+    </script>
+    <script>
+        function setGender() {
+            str1 = " "
+            if (document.getElementById("m").checked)
+                str1 += str + "Male"
+
+            if (document.getElementById("f").checked)
+                str1 += str + "Female"
+
+            document.getElementById("res").innerHTML = str1
+                }
+    </script>
+    <style>
+        * {
+            background-color: blueviolet;
+        }
+
+        fieldset {
+            background-color: rgb(213, 228, 241);
+        }
+
+        button {
+            font-style: oblique;
+            background-color: rgb(240, 170, 85);
+            color: brown;
+        }
+
+        legend {
+            background-color: rgb(43, 148, 50);
+        }
+
+        h1 {
+            font-style: italic;
+            background-color: rgb(134, 223, 193);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>QUALIFICATION SELECTION</h1>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>Select Your Qualification</legend>
+            <input type="checkbox" name="ch1" id="ch1">Doctorate_Of_Philosophy<br>
+            <input type="checkbox" name="ch2" id="ch2">Post_Graduation<br>
+            <input type="checkbox" name="ch3" id="ch3">Graduation<br>
+            <input type="checkbox" name="ch4" id="ch4">Intermediate<br>
+            <input type="checkbox" name="ch5" id="ch5">HighSchool<br>
+        </fieldset>
+        
+            <input type="button" value="Select Qualification" onclick="selQuali()">
+        
+        
+    </form>
+    <div id="res"></div>
+    <br>
+    <h1>Select Gender</h1>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>Select Your gender</legend>
+            <input type="radio" name="m" id="m">Male<br>
+            <input type="radio" name="f" id="f">Female<br>
+
+        </fieldset>
+        <b>
+            <input type="button" value="Select Gender" onclick="setGender()">
+        </b>
+    </form>
+    <div id ="res" ></div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!-- write a program to input hoursWorked, payRate and taxRate and then provide the output
+of the payment_amount and Tax_payable -->
+<html>
+<head>
+    <title>
+        Payment_technique
+    </title>
+    <script>
+        function Payment_technique() {
+            hoursWorked = parseInt(document.getElementById("hoursWorked").value);
+            payRate = parseInt(document.getElementById("payRate").value);
+            taxRate = parseInt(document.getElementById("taxRate").value);
+            payment_amount = payRate * hoursWorked;
+            Tax_payable = payment_amount * taxRate
+            document.getElementById("payment_amount").innerHTML = payment_amount
+            document.getElementById("Tax_payable").innerHTML = Tax_payable;
+        }
+    </script>
+    <style>
+        * {
+            background-color: rgb(223, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1 align="center">Taxation</h1>
+        <table border="1">
+            <tr>
+                <td>Input</td>
+                <td>Output</td>
+            </tr>
+            <tr>
+                <td>hoursWorked</td>
+                <td><input type="text" name="hoursWorked" id="hoursWorked"></td>
+            </tr>
+            <tr>
+                <td>payRate</td>
+                <td><input type="text" name="payRate" id="payRate"></td>
+            </tr>
+            <tr>
+                <td>taxRate</td>
+                <td><input type="text" name="taxRate" id="taxRate"></td>
+            </tr>
+            <tr>
+                <td>payment_amount</td>
+                <td><span name="payment_amount" id="payment_amount"></span></td>
+            </tr>
+            <tr>
+                <td>Tax_payable</td>
+                <td><span name="Tax_payable" id="Tax_payable"></span></td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="button" value="calculate" onclick="Payment_technique()"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

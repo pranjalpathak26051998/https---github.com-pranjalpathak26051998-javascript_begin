@@ -1,0 +1,211 @@
+<html>
+<head>
+    <title>
+        ICSE MARKSHEET
+    </title>
+    <script>
+        function EvaMarksheet() {
+            English_Literature = parseInt(document.getElementById("English Literature").value);
+            English_Language = parseInt(document.getElementById("English Language").value);
+            Hindi = parseInt(document.getElementById("Hindi").value);
+            Physics = parseInt(document.getElementById("Physics").value);
+            Chemistry = parseInt(document.getElementById("Chemistry").value);
+            Biology = parseInt(document.getElementById("Biology").value);
+            History_and_Civics = parseInt(document.getElementById("History & Civics").value);
+            Geography = parseInt(document.getElementById("Geography").value);
+            Computer = parseInt(document.getElementById("Computer").value);
+            Maths = parseInt(document.getElementById("Maths").value);
+            English = (English_Language + English_Literature) / 2;
+            Sst = (History_and_Civics + Geography) / 2;
+            Science = (Physics + Chemistry + Biology) / 3;
+            total = English + Sst + Science + Mathematics + Hindi + Computer
+            Percent = total / 6;
+            // document.getElementById("total").innerHTML=total
+            //document.getElementById("per").innerHTML=Percent
+
+            //Mathematics = parseInt(document.getElementById("Maths").value);
+            //Hindi = Hindi;
+            // Computer = Computer;
+            //document.getElementById("total").innerHTML = Total
+            //  document.getElementById("per").innerHTML = Percent
+            //  document.getElementById("English").innerHTML = English
+            //  document.getElementById("Hindi").innerHTML = Hindi
+            //  document.getElementById("Maths").innerHTML = Mathematics
+            //  document.getElementById("Computer").innerHTML = Computer
+            //  document.getElementById("Sst").innerHTML = Sst
+            //  document.getElementById("Science").innerHTML = Science
+        }
+
+        function printData() {
+
+            Hindi = parseInt(document.getElementById("Hindi").value);
+            document.getElementById("pHindi").innerHTML = Hindi
+
+            // English = parseInt(document.getElementById("Hindi").value);
+            document.getElementById("pEnglish").innerHTML = English
+            document.getElementById("pScience").innerHTML = Science
+            document.getElementById("pSst").innerHTML = Sst
+
+            Maths = parseInt(document.getElementById("Maths").value);
+            document.getElementById("pMathematics").innerHTML = Maths
+            Computer = parseInt(document.getElementById("Computer").value);
+            document.getElementById("pComputer").innerHTML = Computer
+            document.getElementById("ptotal").innerHTML = total
+            document.getElementById("pper").innerHTML = Percent
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(219, 255, 135);
+        }
+
+        table {
+            background-color: rgb(255, 235, 193);
+            border-width: 20px;
+        }
+
+        input {
+            border-radius: 20%;
+        }
+
+        tr {
+            border-color: rgb(2, 2, 168);
+        }
+
+        td {
+            font-style: oblique;
+        }
+
+        th {
+            font-style: inherit;
+        }
+
+        h1 {
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <p>The Council for the Indian School Certificate Examinations (CISCE)[1] is a semi gov-para privately held
+            national-level[2][3] board of school education in India that conducts the Indian Certificate of Secondary
+            Education (ICSE) Examination for Class X and the Indian School Certificate (ISC) for Class XII.[4] It was
+            established in 1958.[5] Over 2,300 schools in India and abroad are affiliated to the CISCE.[2] It is also
+            recognised as a 'Non-Governmental Board of School Education'. [6]
+
+            This Indian Council was set up on the grounds that a board was required to administer the examinations being
+            conducted in India by the University of Cambridge and to optimally tailor them according to the nation's
+            need. The future education policies were prepared under the aegis of the Cambridge University.</p>
+    </footer>
+
+    <header>
+        <h1 align="center">Council for Indian School Certificate Examination</h1>
+    </header>
+    <h2 align="center"><img src="img/icselogo - Copy.png"> </h2>
+    <form>
+        <table border="2" align="center" width="60%">
+            <th colspan="2">
+                Marksheet Evaluation
+            </th>
+            <tr>
+                <td align="center">Subject</td>
+                <td align="center">Valuation</td>
+            </tr>
+            <tr>
+                <td>English Literature</td>
+                <td><input type="text" name="English Literature" Id="English Literature"></td>
+            </tr>
+            <tr>
+                <td>English Language</td>
+                <td><input type="text" name="English Language" Id="English Language"></td>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td><input type="text" name="Hindi" Id="Hindi"></td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td><input type="text" name="Physics" Id="Physics"></td>
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td><input type="text" name="Chemistry" Id="Chemistry"></td>
+            </tr>
+            <tr>
+                <td>Biology</td>
+                <td><input type="text" name="Biology" Id="Biology"></td>
+            </tr>
+            <tr>
+                <td>History & Civics</td>
+                <td><input type="text" name="History & Civics" Id="History & Civics"></td>
+            </tr>
+            <tr>
+                <td>Geography</td>
+                <td><input type="text" name="Geography" Id="Geography"></td>
+            </tr>
+            <tr>
+                <td>Computer</td>
+                <td><input type="text" name="Computer" Id="Computer"></td>
+            </tr>
+            <tr>
+                <td>Maths</td>
+                <td><input type="text" name="Maths" Id="Maths"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="calculate" onclick="EvaMarksheet();">
+                    <input type="button" value="print" onclick="printData();"></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <br>
+    <form>
+        <table border="2" align="center" width="60%">
+            <th colspan="2">
+                Marksheet
+            </th>
+            <tr>
+                <td align="center">Subject</td>
+                <td align="center">Marks</td>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td><span id="pHindi"></span></td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td><span id="pEnglish"></span></td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td><span id="pScience"></span></td>
+            </tr>
+            <tr>
+                <td>Sst</td>
+                <td><span id="pSst"></span></td>
+            </tr>
+            <tr>
+                <td>Mathematics</td>
+                <td><span id="pMathematics"></span></td>
+            </tr>
+            <tr>
+                <td>Computer</td>
+                <td><span id="pComputer"></span></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><span id="ptotal"></span></td>
+            </tr>
+            <tr>
+                <td>Per</td>
+                <td><span id="pper"></span></td>
+            </tr>
+            <tr>
+                <td>Division</td>
+                <td><span id="div"></span></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

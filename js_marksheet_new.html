@@ -1,0 +1,35 @@
+<!-- Marksheet tried with the help of data handling ,,, my target was to input data in the input type= "text"
+area and then print the stored data it in the format of a properly designed  marksheet  -->
+<html>
+    <head>
+        <title>
+            Marksheet
+        </title>
+        <script>
+            function selMarks();
+            str7 = ""
+            if (document.getElementsById("str1").checked)
+                str7 = str7 + "English" + " "
+
+                document.getElementsById("res").innerHTML = str7
+
+        </script>
+    </head>
+    <body>
+        <th bgcolor="red" >Council for Indian School Certificate Examination</th>
+        <hr>
+        <form>
+            <fieldset>
+                <legend>Board_Examination_Marksheet</legend>
+                <input type="text" name="str1" Id="str1">English<br>
+                <input type="text" name="str2" Id="str2">Hindi<br>
+                <input type="text" name="str3" Id="str3">Mathematics<br>
+                <input type="text" name="str4" Id="str4">Science<br>
+                <input type="text" name="str5" Id="str5">Computor<br>
+                <input type="text" name="str6" Id="str6">Social_Studies<br>
+            </fieldset>
+            <input type="button" value="Print Marks" onclick="selMarks()">
+        </form>
+        <div id="res"></div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!-- Marksheet tried with the help of function and data handling but presently unsuccessful -->
+
+<html>
+
+<head>
+    <title>MARKSHEET</title>
+    <script>
+        // str1= parseInt(prompt("Enter the Marks of English Literature"))
+        // str2= parseInt(prompt("Enter the Marks of English Language"))
+        // str3= parseInt(prompt("Enter the Marks of Hindi"))
+        // str4= parseInt(prompt("Enter the Marks of Geography"))    
+        function setMarksheet() {
+            str = ""
+            if (document.getElementById("S1").checked < 32) {
+                str += str + "ENGLISH LITERATURE" + ","
+            }
+
+        }
+    </script>
+    <style>
+        table {
+            border: 5px 4px 4px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Council for the Indian School Certificate Examination</h1>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>MARKSHEET</legend>
+            <table>
+                <tr>
+                    <td>Subject</td>
+                    <td>Marks</td>
+                </tr>
+                <tr>
+                    <td>ENGLISH LITERATURE</td>
+                    <td><input type="text" value="enter marks obtained" name="s1" Id="s1"></td>
+                </tr>
+                <tr>
+                    <td>ENGLISH LANGUAGE</td>
+                    <td><input type="text" value="enter marks obtained" name="s2" Id="s2"></td>
+                </tr>
+                <tr>
+                    <td>HINDI</td>
+                    <td><input type="text" value="enter marks obtained" name="s3" Id="s3"></td>
+                </tr>
+                <tr>
+                    <td>GEOGRAPHY</td>
+                    <td><input type="text" value="enter marks obtained" name="s4" Id="s4"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="=button" name="Submit" onclick="setMarksheet()">
+    </form>
+    <div Id="res"></div>
+</body>
+
+</html>

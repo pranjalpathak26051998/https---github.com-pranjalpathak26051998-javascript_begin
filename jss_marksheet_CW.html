@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <script>
+            function marksheet()
+            {
+                hindi=parseInt(document.getElementById("hindi").value);
+                eng=parseInt(document.getElementById("eng").value);
+                math=parseInt(document.getElementById("math").value);
+                total=hindi+eng+math
+                per=total/3;
+                document.getElementById("total").innerHTML=total
+                document.getElementById("per").innerHTML=per
+                if(per>=60)
+                    document.getElementById("divi").innerHTML="First"
+                else if(per>=45 && per<60)
+                    document.getElementById("divi").innerHTML="Seccnd"
+                else if(per>=33 && per<60)
+                    document.getElementById("divi").innerHTML="Third"
+                else
+                    document.getElementById("divi").innerHTML="<font color='red'> Fail </font>"
+            }
+            // printdata
+            function printdata()
+            {
+                hindi=parseInt(document.getElementById("hindi").value);
+                eng=parseInt(document.getElementById("eng").value);
+                math=parseInt(document.getElementById("math").value);
+                document.getElementById("phindi").innerHTML=hindi
+                document.getElementById("ptotal").innerHTML=total
+            }
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Marksheet</legend>
+                <table align="center" width="60%" border="1">
+                    <tr>
+                        <th colspan="2">Marksheet</th>
+                    </tr>
+                    <tr>
+                        <td>Hindi</td>
+                        <td><input type="text" name="hindi" id="hindi"></td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td><input type="text" name="eng" id="eng"></td>
+                    </tr>
+                    <tr>
+                        <td>Math</td>
+                        <td><input type="text" name="math" id="math"></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td><span id="total"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Per</td>
+                        <td><span id="per"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Division</td>
+                        <td><span id="divi"></span></td>
+                    </tr>
+                    <tr>
+                        
+                        <td colspan="2"><input type="button" value="calculate" 
+                            onclick="marksheet();"> <input type="button" value="print" onclick="printdata();"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <hr>
+        <br>
+        <table>
+            <tr>
+                <td>Hindi</td>
+                <td><span id="phindi"></span></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><span id="ptotal"></span></td>
+            </tr>
+        </table>
+    </body>
+</html>

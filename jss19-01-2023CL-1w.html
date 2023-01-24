@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            function makeTable()
+            {
+                var table=document.getElementById("table")
+                var row=document.getElementById("rows").value
+                var col=document.getElementById("cols").value
+                console.log(row+"   "+col)
+                for(r=0;r<row;r++)
+                {
+                    var tr=document.createElement('tr')
+                    for(c=0;c<col;c++)
+                    {
+                        var td=document.createElement('td')
+                        var text=document.createTextNode("Column "+c+"Row "+r)
+                        td.appendChild(text)
+                        tr.appendChild(td)
+                    }
+                    table.appendChild(tr)
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Enter the no of row:<input type="text" id="rows"><br>
+        Enter the no of column:<input type="text" id="cols"><br>
+        <input type="button" value="click" onclick="makeTable();">
+        <table border="1" id="table">          
+        </table>
+    </body>
+</html>
